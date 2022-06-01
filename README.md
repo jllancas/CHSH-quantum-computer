@@ -10,12 +10,17 @@ The main notebook was used for obtaining the data used in Ref. [4]. Three quantu
 
 <p align="center">
   <img src="images/barplot.png" width="500"/><br>
-  Scores for three IBM devices obtained from data collected across several days
+  Scores for three IBM devices obtained from data collected across several days [4]
 </p>
 
 The scores shown above have been processed using basic readout-error mitigation. As shown in the figure above, even error-corrected results are unimpressive for ibmq_lima. Additionally, daily recalibration of the hardware causes the results to drift. This drift can make firm conclusions somewhat difficult to obtain when the final scores are so close to the real/complex threshold of 7.66. However, ibm_lagos (which is available to members of the [IBM Quantum Researchers program](https://quantum-computing.ibm.com/programs/researchers)) shows consistently strong results which are separated from the boundary by many standard deviations.
 
 The enclosed [notebook](CHSHsimulation.ipynb) describes the specific quantum circuits needed to perform the experiment and mitigate readout errors. The uploaded version makes use of ibmq_manila, but the device can be changed to any device to which the user has access.
+
+<p align="center">
+  <img src="images/density.png" width="700"/><br>
+  Conditional probabilities for final state obtained from several IBM devices and the QASM simulator [4]
+</p>
 
 ### Some final caveats:
 
