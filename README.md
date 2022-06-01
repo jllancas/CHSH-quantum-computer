@@ -1,2 +1,7 @@
-# CHSH-quantum-computer
-Computational scheme for using IBM quantum devices to test a CHSH inequality which can prove the necessity of complex numbers in the traditional framework of quantum mechanics (up to caveats and loopholes).
+# Testing CHSH inequality on quantum computers
+
+<p align="center">
+<img src="density.png" alt="conditional probability plots" width="500"/><br>
+  Conditional probabilities $P(abc|xz)$ for CHSH experiment performed on several IBM quantum devices as well as the QASM simulator and a theoretical prediction.
+</p>
+
