@@ -1,6 +1,6 @@
 # Testing CHSH inequality on quantum computers
 
-The main [notebook](CHSHsimulation.ipynb) shows the basic copmutation scheme for using [IBM quantum](https://www.ibm.com/quantum) devices to perform a recently proposed experiment [1] designed to test the necessity of complex numbers in quantum mechanics. The original experiment has been performed using custom-fabricated qubits [2] as well as photonic systems [3]. The aim of the present work is to demonstrate the ease by which this experiment can be performed using freely-available resources from IBM Quantum. A formal writeup can be found [here](https://arxiv.org/abs/2205.01262).
+The main [notebook](CHSHsimulation.ipynb) shows the basic copmutation scheme for using [IBM quantum](https://www.ibm.com/quantum) devices via the [Qiskit](https://qiskit.org/) SDK to perform a recently proposed experiment [1] designed to test the necessity of complex numbers in quantum mechanics. The original experiment has been performed using custom-fabricated qubits [2] as well as photonic systems [3]. The aim of the present work is to demonstrate the ease by which this experiment can be performed using freely-available resources from IBM Quantum. A formal writeup can be found [here](https://arxiv.org/abs/2205.01262).
 
 The main notebook was used for obtaining the data used in Ref. [4]. Three quantum processors were used to collect data:
 
@@ -9,7 +9,7 @@ The main notebook was used for obtaining the data used in Ref. [4]. Three quantu
 - ibm_lagos v1.0.27, a Falcon r5.11H processor
 
 <p align="center">
-  <img src="images/barplot.png" width="400"/><br>
+  <img src="images/barplot.png" width="500"/><br>
   Scores for three IBM devices obtained from data collected across several days
 </p>
 
@@ -19,9 +19,9 @@ The enclosed [notebook](CHSHsimulation.ipynb) describes the specific quantum cir
 
 ### Some final caveats:
 
-- This approach lets someone with only minimal Qiskit/IBM quantum knowledge perform legitimate experiments which traditionally require a wealth of experience and resources; it should be noted, however, that wide accessibility does carry some limitations. For example, a typical user does not have high-level control over calibrations, and the locality loophole cannot be closed.
+- This approach lets someone with only minimal [Qiskit](https://qiskit.org/)/IBM quantum knowledge perform legitimate experiments which traditionally require a wealth of experience and resources; it should be noted, however, that wide accessibility does carry some limitations. For example, a typical user does not have high-level control over calibrations, and the locality loophole cannot be closed.
 
-- The author acknowledges the use of IBM Quantum services for this work. The views expressed are those of the author and do not reflect the official policy or position of IBM or the IBM Quantum team. Additionally, the author acknowledges the access to advanced services provided by the IBM Quantum Researchers Program.
+- The author acknowledges the use of [IBM Quantum](https://www.ibm.com/quantum) services for this work. The views expressed are those of the author and do not reflect the official policy or position of IBM or the IBM Quantum team. Additionally, the author acknowledges the access to advanced services provided by the [IBM Quantum Researchers Program](https://quantum-computing.ibm.com/programs/researchers).
 
 ---------------------------------------------------
 ### References
