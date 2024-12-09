@@ -22,6 +22,6 @@ Instructions:
 
 (VI) The file [RealQMCalculations.ipynb](RealQMCalculations.ipynb) performs the theoretical calculations related to the main experiment for real- and complex-valued QM. Qiskit is not used in this notebook. Two approaches are used for each representation (probability distribution computation and expectation value formulation).
 
-(VII) The file [CalibrationData.pdf](CalibrationData.pdf) contains all calibration information (T1/T2 times and qubit frequencies, gate times, etc.) for all hardware used in this work. The individual scores for all experimental runs are also tabulated with and without readout-error mitigation.
+(VII) The file [CalibrationRawScores.pdf](CalibrationRawScores.pdf) contains all calibration information (T1/T2 times and qubit frequencies, gate times, etc.) for all hardware used in this work. The individual scores for all experimental runs are also tabulated with and without readout-error mitigation.
 
 
