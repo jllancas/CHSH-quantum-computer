@@ -1,43 +1,27 @@
-# Testing CHSH inequality on quantum computers
+SUPPLEMENTARY MATERIALS INFORMATION to accompany [https://arxiv.org/abs/2205.01262](https://arxiv.org/abs/2205.01262)
 
-The main [notebook](CHSHsimulation.ipynb) shows the basic copmutation scheme for using [IBM quantum](https://www.ibm.com/quantum) devices via the [Qiskit](https://qiskit.org/) SDK to perform a recently proposed experiment [1] designed to test the necessity of complex numbers in quantum mechanics. The original experiment has been performed using custom-fabricated qubits [2] as well as photonic systems [3]. The aim of the present work is to demonstrate the ease by which this experiment can be performed using freely-available resources from IBM Quantum. A formal writeup can be found [here](https://arxiv.org/abs/2205.01262).
+Description: The .ipynb files are (Python 3) Jupyter notebooks using Qiskit 1.1
 
-The main notebook was used for obtaining the data used in Ref. [4]. Three quantum processors were used to collect data:
+Total No. of Files: There are 6 files, including the README.TXT files
 
-- ibmq_lima v1.0.35, a Falcon r4T processor
-- ibmq_manila v1.0.29, a Falcon r5.11L processor
-- ibm_lagos v1.0.27, a Falcon r5.11H processor
+File Names:  README.TXT, CHSH.ipynb, EstimatorExample.ipynb, SamplerExample.m, RealQMCalculations.ipynb, CalibrationData.pdf
 
-<p align="center">
-  <img src="images/barplot.png" width="500"/><br>
-  Scores for three IBM devices obtained from data collected across several days [4]
-</p>
+File Types:  txt, ipynb, pdf
 
-The scores shown above have been processed using basic readout-error mitigation. As shown in the figure above, even error-corrected results are unimpressive for ibmq_lima. Additionally, daily recalibration of the hardware causes the results to drift. This drift can make firm conclusions somewhat difficult to obtain when the final scores are so close to the real/complex threshold of 7.66. However, ibm_lagos (which is available to members of the [IBM Quantum Researchers program](https://quantum-computing.ibm.com/programs/researchers)) shows consistently strong results which are separated from the boundary by many standard deviations.
+Instructions: 
 
-The enclosed [notebook](CHSHsimulation.ipynb) describes the specific quantum circuits needed to perform the experiment and mitigate readout errors. The uploaded version makes use of ibmq_manila, but the device can be changed to any device to which the user has access.
+(I) This notebook was written using the (free) Anaconda Individual Python Distribution (https://www.anaconda.com/)
 
-<p align="center">
-  <img src="images/density.png" width="700"/><br>
-  Conditional probabilities for final state obtained from several IBM devices and the QASM simulator [4]
-</p>
+(II) The Python notebooks import Qiskit 1.x, which must be installed locally to run the notebooks. 
 
-### Some final caveats:
+(III) The file CHSH.ipynb allows the user to perform the calculations related to the CHSH-based Bell test and "triple CHSH" inequality test described in the manuscript using complex-valued and real-valued QM. Qiskit is not used in this notebook.
 
-- This approach lets someone with only minimal [Qiskit](https://qiskit.org/)/IBM quantum knowledge perform legitimate experiments which traditionally require a wealth of experience and resources; it should be noted, however, that wide accessibility does carry some limitations. For example, a typical user does not have high-level control over calibrations, and the locality loophole cannot be closed.
+(IV) The file EstimatorExample.ipynb performs the main experiment using the Estimator Primitive. Qiskit 1.0+ must be installed, and QiskitRuntime is required for running the circuit on actual hardware. An IBM Quantum Account (open-access plan) is also required for using actual quantum hardware.
 
-- The author acknowledges the use of [IBM Quantum](https://www.ibm.com/quantum) services for this work. The views expressed are those of the author and do not reflect the official policy or position of IBM or the IBM Quantum team. Additionally, the author acknowledges the access to advanced services provided by the [IBM Quantum Researchers Program](https://quantum-computing.ibm.com/programs/researchers).
+(V) The file SamplerExample.ipynb performs the main experiment using the Sampler Primitive. Qiskit 1.0+ must be installed, and QiskitRuntime is required for running the circuit on actual hardware. An IBM Quantum Account (open-access plan) is also required for using actual quantum hardware.
 
----------------------------------------------------
-### References
+(VI) The file RealQMCalculations.ipynb performs the theoretical calculations related to the main experiment for real- and complex-valued QM. Qiskit is not used in this notebook. Two approaches are used for each representation (probability distribution computation and expectation value formulation).
 
-1. [M.-O. Renou, D. Trillo, M. Weilenmann, T. P. Le, A. Tavakoli, N. Gisin, A. Acín, and M. Navascués, <i>Nature</i> <b>600</b>, 625
-(2021)](https://doi.org/10.1038/s41586-021-04160-4)
+(VII) The file CalibrationData.pdf contains all calibration information (T1/T2 times and qubit frequencies, gate times, etc.) for all hardware used in this work. The individual scores for all experimental runs are also tabulated with and without readout-error mitigation.
 
-2. [M.-C. Chen, C. Wang, F.-M. Liu, J.-W. Wang, C. Ying, Z.-X. Shang, Y. Wu, M. Gong, H. Deng, F.-T. Liang, et al., <i>Phys. Rev. Lett.</i> <b>128</b>, 040403 (2022)](https://link.aps.org/doi/10.1103/PhysRevLett.128.040403)
 
-3. [Z.-D. Li, Y.-L. Mao, M. Weilenmann, A. Tavakoli, H. Chen, L. Feng, S.-J. Yang, M.-O. Renou, D. Trillo, T. P. Le, et al., <i>Phys. Rev. Lett.</i> <b>128</b>, 040402 (2022)](https://link.aps.org/doi/10.1103/PhysRevLett.128.040402)
-
-4. [J. L. Lancaster, arXiv:2205.01262](https://arxiv.org/abs/2205.01262)
-
-5. [J. L. Miller, <i>Physics Today</i> <b>75</b>(3) 14, (2022)](https://physicstoday.scitation.org/doi/10.1063/PT.3.4955)
